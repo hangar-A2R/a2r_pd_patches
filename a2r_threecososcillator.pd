@@ -128,13 +128,13 @@
 #X obj 94 198 vsl 10 40 1000 100 0 1 empty empty speed 0 -8 1 8 -260818
 -1 -1 3900 1;
 #X obj 45 281 nbx 3 14 0 127 0 0 empty empty note 0 -6 1 10 -260818
--1 -1 97 256;
+-1 -1 91 256;
 #N canvas 0 54 1366 713 a2r_announcer 0;
 #X obj 397 1027 cnv 15 100 40 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X msg 204 346 disconnect;
 #X obj 426 1176 tgl 15 0 empty empty 1=connected 20 8 0 8 -4034 -257985
--1 1 1;
+-1 0 1;
 #X obj 611 1134 routeOSC;
 #X text 532 1133 see also:;
 #X text 522 1069 bundle depth;
@@ -334,7 +334,6 @@
 #X text 486 315 comment;
 #X obj 542 162 loadbang;
 #X msg 354 395 disconnect;
-#X msg 333 306 passwd hackme;
 #X obj 204 558 outlet;
 #X obj 139 61 inlet~;
 #X obj 195 60 inlet~;
@@ -359,27 +358,28 @@ with spaces!;
 #X obj 204 481 oggcast~ 2 256;
 #X obj 305 602 outlet;
 #X msg 317 279 connect canal.hangar.org hangar.ogg 8000;
-#X connect 0 0 8 0;
-#X connect 2 0 25 0;
-#X connect 5 0 13 0;
-#X connect 6 0 25 0;
-#X connect 7 0 25 0;
-#X connect 9 0 25 0;
-#X connect 10 0 25 1;
-#X connect 11 0 25 0;
-#X connect 13 0 27 0;
-#X connect 13 1 7 0;
-#X connect 13 2 15 0;
-#X connect 13 4 11 0;
-#X connect 15 0 25 0;
-#X connect 19 0 25 0;
-#X connect 21 0 26 0;
-#X connect 24 0 13 0;
-#X connect 25 0 0 0;
-#X connect 25 1 21 0;
-#X connect 27 0 25 0;
+#X msg 333 306 passwd yourpass;
+#X connect 0 0 7 0;
+#X connect 2 0 24 0;
+#X connect 5 0 12 0;
+#X connect 6 0 24 0;
+#X connect 8 0 24 0;
+#X connect 9 0 24 1;
+#X connect 10 0 24 0;
+#X connect 12 0 26 0;
+#X connect 12 1 27 0;
+#X connect 12 2 14 0;
+#X connect 12 4 10 0;
+#X connect 14 0 24 0;
+#X connect 18 0 24 0;
+#X connect 20 0 25 0;
+#X connect 23 0 12 0;
+#X connect 24 0 0 0;
+#X connect 24 1 20 0;
+#X connect 26 0 24 0;
+#X connect 27 0 24 0;
 #X restore 28 488 pd a2r_streamer;
-#X obj 26 508 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 26 508 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 115 510 5 0 0 0 - - -;
 #X text 246 16 Three cosine oscillator by obiwannabe (http://www.obiwannabe.co.uk/)
